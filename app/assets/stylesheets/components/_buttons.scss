@@ -1,0 +1,15 @@
+.navbar-button {
+  padding: 8px 22px;
+  background-color: $primary-color;
+  color: white;
+  border-radius: 3px;
+  box-shadow: (2px, 3px, 8px, rbga(0,0,0,0.3));
+  margin: 0.5rem 1rem;
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+    background-color: $primary-color-dark;
+  }
+}
+
