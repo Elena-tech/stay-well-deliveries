@@ -5,6 +5,10 @@
   justify-content: space-between;
   align-items: center;
   background-color: white;
+
+  @include for-medium-devices-down {
+    padding: 0 20px;
+  }
 }
 
 .navbar-logo {
@@ -23,6 +27,11 @@
     font-weight: bolder;
     text-decoration: none;
   }
+
+  @include for-phone-only {
+    font-size: 14px;
+    width: 150px;
+  }
 }
 
 .navbar-link {
@@ -37,6 +46,52 @@
     text-decoration: none;
     padding-bottom: 10px;
     border-bottom: 3px solid $primary-color;
+  }
+}
+
+.navbar-links {
+  @include for-medium-devices-down {
+    display: none;
+  }
+}
+
+.navbar-burger {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 25px;
+  background-color: $primary-color;
+  position: relative;
+
+  & a {
+    color: white;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  & i {
+    margin-right: 10px;
+  }
+
+  @include for-large-devices-up {
+    display: none;
+  }
+}
+
+.navbar-mobile-menu {
+  position: absolute;
+    right: 0;
+    top: 80px;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  padding: 10px 20px;
+  flex-direction: column;
+  display: block;
+
+  @include for-large-devices-up {
+    display: none;
   }
 }
 
