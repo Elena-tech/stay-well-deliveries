@@ -1,7 +1,23 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar-stay-well">
+  <div class="navbar-logo">
+    <%= image_tag "logo.png" %>
+    <a href="/">Stay Well Deliveries</a>
+  </div>
+  <div class="navbar-links">
+    <a href="/" class="navbar-link">Home Page</a>
+    <a href="/donate" class="navbar-link">Donate</a>
+    <a href="/contact" class="navbar-link">Contact Page</a>
+    <a href="/collaborator" class="navbar-button">Collaborate</a>
+    <a href="/help" class="navbar-button">Request Help</a>
+  </div>
+</div>
+
+
+<!-- <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+    <%= image_tag "heart.svg" %>
+    <a href="/">Stay Well Deliveries</a>
+  <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -27,9 +43,25 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Home Page", root_path, class: "nav-link" %>
+          <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Become a Collaborator", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact Page", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Donate", root_path, class: "nav-button" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Find Help", root_path, class: "nav-button" %>
         </li>
       <% end %>
     </ul>
   </div>
 </div>
+
+
+ -->

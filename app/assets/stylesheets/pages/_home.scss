@@ -1,1 +1,16 @@
-// Specific CSS for your home-page
+.home-hero-banner {
+  background-image: linear-gradient(rgba(0,0,0,0.4)),url('https://images.pexels.com/photos/461049/pexels-photo-461049.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 0 40px;
+
+  & p {
+    font-size: 18px;
+  }
+}
