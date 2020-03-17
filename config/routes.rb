@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     get '/contact', to: 'pages#contact'
     get '/collaborator/new', to: 'collaborators#new'
     get '/recipient/new', to: 'recipients#new'
+    post '/collaborator/new', to: 'collaborators#new'
+    post '/recipient/new', to: 'recipients#new'
     get '/dashboard', to: 'pages#dashboard'
 end
