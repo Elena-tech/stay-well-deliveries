@@ -1,0 +1,12 @@
+<%# collaborators %>
+<%= simple_form_for @collaborator do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :telephone %>
+  <%= f.input :neighbourhood %>
+  <%= f.input :postcode %>
+  <%= f.input :transport_type,
+        as: :checkboxes,
+        collection: ["Car", "Motorcycle", "Bicycle", "Walking"] %>
+  <%= f.button :submit %>
+<% end %>
