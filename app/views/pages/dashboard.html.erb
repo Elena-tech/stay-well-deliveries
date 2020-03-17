@@ -1,0 +1,67 @@
+<div class="dashboard">
+  <div class="container">
+    <% if current_user.admin? %>
+    <div class = "d-flex">
+        <div class="nav flex-column nav-pills mr-5" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="v-pills-dashboard-tab" data-toggle="pill" href="#v-pills-dashboard" role="tab" aria-controls="v-pills-dashboard" aria-selected="false">Dashboard</a>
+          <a class="nav-link" id="v-pills-collaborators-tab" data-toggle="pill" href="#v-pills-collaborators" role="tab" aria-controls="v-pills-collaborators" aria-selected="false">Collaborators</a>
+          <a class="nav-link" id="v-pills-recipients-tab" data-toggle="pill" href="#v-pills-recipients" role="tab" aria-controls="v-pills-recipients" aria-selected="false">Recipients</a>
+          <a class="nav-link" id="v-pills-donations-tab" data-toggle="pill" href="#v-pills-donations" role="tab" aria-controls="v-pills-donations" aria-selected="false">Donations</a>
+        </div>
+      <div class="tab-pane fade show" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab"></div>
+      <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade" id="v-pills-collaborators" role="tabpanel" aria-labelledby="v-pills-collaborators-tab">
+           <h1>Help Offered</h1>
+            <table class="table dashboard-table">
+              <thead class="thead">
+                <tr>
+                  <th scope="col">Full Name</th>
+                  <th scope="col">Request Help Date</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">City</th>
+                  <th scope="col">Post Code</th>
+                  <th scope="col">Help Type</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+            </table>
+        </div>
+
+        <div class="tab-pane fade show" id="v-pills-recipients" role="tabpanel" aria-labelledby="v-pills-recipients-tab">
+          <h1>Help Requested</h1>
+            <table class="table dashboard-table">
+              <tr>
+                <th scope="col">Full Name</th>
+                <th scope="col">Request Help Date</th>
+                <th scope="col">Age</th>
+                <th scope="col">City</th>
+                <th scope="col">Post Code</th>
+                <th scope="col">Help Type</th>
+                <th scope="col">Status</th>
+              </tr>
+            </table>
+          </div>
+
+        <div class="tab-pane fade show" id="v-pills-donations" role="tabpanel" aria-labelledby="v-pills-donations-tab">
+          <h1>Donations Received</h1>
+            <table class="table dashboard-table">
+              <tr>
+                <th scope="col">Full Name</th>
+                <th scope="col">Request Help Date</th>
+                <th scope="col">Age</th>
+                <th scope="col">City</th>
+                <th scope="col">Post Code</th>
+                <th scope="col">Help Type</th>
+                <th scope="col">Status</th>
+              </tr>
+            </table>
+          </div>
+      </div>
+    </div>
+
+      </div>
+    <% else %>
+    <h5>Sorry, you do not have access to this page</h5>
+    <% end %>
+  </div>
+</div>
