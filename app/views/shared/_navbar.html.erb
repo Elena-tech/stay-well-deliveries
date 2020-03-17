@@ -1,7 +1,7 @@
 <div class="navbar-stay-well">
   <div class="navbar-logo">
     <%= image_tag "logo.png" %>
-    <a href="/">Stay Well Deliveries</a>
+    <a href="/">Stay Well Deliveries <br> <span>Coronavirus Support Community</span></a>
   </div>
   <div class="navbar-links">
     <a href="/" class="navbar-link">Home Page</a>
@@ -10,11 +10,13 @@
     <a href="/collaborator" class="navbar-button">Collaborate</a>
     <a href="/help" class="navbar-button">Request Help</a>
   </div>
-  <div class="navbar-burger">
+  <div class="navbar-burger" onclick="mobileNav();">
     <i class="fas fa-bars"></i>
-    <a href="">Menu</a>
+    <p>Menu</p>
   </div>
   <div class="navbar-mobile-menu" id="mobNav">
+    <h1 class="navbar-mobile-title">MENU</h1>
+    <span class="navb-mobile-close" onclick="mobileNav();">&times;</span>
     <a href="/" class="navbar-mobile-link">Home Page</a>
     <a href="/donate" class="navbar-mobile-link">Donate</a>
     <a href="/contact" class="navbar-mobile-link">Contact Page</a>
@@ -24,12 +26,16 @@
 </div>
 
 <script>
-mobileNav() => {
+
+ function mobileNav() {
   const x = document.getElementById("mobNav");
-  if (x.style.display === "block") {
+  if (x.style.display === "flex") {
     x.style.display = "none";
+    x.style.transition = "0.3s"
   } else {
-    x.style.display = "block";
+    x.style.display = "flex";
+    x.style.transition = "0.3s"
   }
-}
+};
 </script>
+
