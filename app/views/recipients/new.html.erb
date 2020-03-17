@@ -1,1 +1,17 @@
-<%= render "form" %> 
+<div class="container">
+  <%= simple_form_for @recipient, url: recipient_new_path do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :telephone %>
+    <%= f.input :neighbourhood %>
+    <%= f.input :postcode %>
+    <%= f.input :payment_type,
+          as: :select,
+          prompt: 'Choose payment type',
+          collection: ["Paypal", "Bank Transfer", "Cash", "Can't currently afford it"] %>
+    <%= f.input :support_type,
+          as: :check_boxes,
+          collection: ["Food/Supplies Delivery", "Prescription Collection"] %>
+    <%= f.button :submit, 'Submit your request', class: "btn btn-primary" %>
+  <% end %>
+</div>

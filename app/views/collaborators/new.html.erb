@@ -1,1 +1,13 @@
-<%= render 'form' %> 
+<div class="container">
+  <%= simple_form_for @collaborator, url: collaborator_new_path do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :telephone %>
+    <%= f.input :neighbourhood %>
+    <%= f.input :postcode %>
+    <%= f.input :transport_type,
+          as: :check_boxes,
+          collection: ["Car", "Motorcycle", "Bicycle", "Walking"] %>
+    <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
+</div>
