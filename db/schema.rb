@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_17_132639) do
+ActiveRecord::Schema.define(version: 2020_03_17_170516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_03_17_132639) do
   create_table "collaborators", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.integer "telephone"
+    t.bigint "telephone"
     t.string "neighbourhood"
     t.string "postcode"
     t.string "transport_type"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_03_17_132639) do
   create_table "recipients", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.integer "telephone"
+    t.bigint "telephone"
     t.string "neighbourhood"
     t.string "postcode"
     t.string "payment_type"
@@ -45,6 +45,9 @@ ActiveRecord::Schema.define(version: 2020_03_17_132639) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin"

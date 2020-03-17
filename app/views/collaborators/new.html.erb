@@ -1,5 +1,5 @@
 <div class="container">
-  <%= simple_form_for @collaborator, url: collaborator_new_path do |f| %>
+  <%= simple_form_for @collaborator, url: collaborator_new_path, method: :post do |f| %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :telephone %>
