@@ -1,0 +1,70 @@
+form {
+  padding-bottom: 16px;
+
+  .btn {
+    margin-left: 16px;
+  }
+}
+
+#form-collab-title, #form-recipient-title {
+  overflow: hidden;
+  padding: none !important;
+  margin: 10px 16px;
+  border: solid 1px lightgray;
+  border-radius: 10px;
+
+  .form-title-bar {
+    height: 10px;
+    background-color: #C32121;
+  }
+
+  .form-title {
+    padding: 10px;
+  }
+}
+
+.form-control {
+  box-shadow: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: solid 1px #C32121 !important;
+  font-size: 0.7rem;
+  width: 60%;
+  margin-left: 8px !important;
+}
+
+.form-control.select {
+  border: solid 1px #C32121 !important;
+}
+
+abbr {
+  color: #C32121;
+}
+
+.form-group {
+  margin: 1rem 1rem;
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+
+  .disclaimer {
+    font-size: 0.7rem;
+    color: gray;
+  }
+
+  label {
+    font-size: 0.8rem;
+    padding-left: 12px;
+  }
+
+  .pt-0 {
+    font-size: 0.8rem;
+    padding-bottom: none !important;
+  }
+
+  .form-check, .form-check-label {
+    font-size: 0.7rem;
+  }
+}

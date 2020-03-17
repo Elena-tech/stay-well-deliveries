@@ -1,10 +1,14 @@
 <div class="container">
+  <div id="form-recipient-title">
+    <div class="form-title-bar"></div>
+    <h3 class="form-title">London COVID-19 Support</h3>
+  </div>
   <%= simple_form_for @recipient, url: recipient_new_path, method: :post do |f| %>
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :telephone %>
-    <%= f.input :neighbourhood %>
-    <%= f.input :postcode %>
+    <%= f.input :first_name, placeholder: "Your answer" %>
+    <%= f.input :last_name, placeholder: "Your answer" %>
+    <%= f.input :telephone, placeholder: "Your answer" %>
+    <%= f.input :neighbourhood, placeholder: "Your answer" %>
+    <%= f.input :postcode, placeholder: "Your answer" %>
     <%= f.input :payment_type,
           as: :select,
           prompt: 'Choose payment type',
@@ -13,5 +17,16 @@
           as: :check_boxes,
           collection: ["Food/Supplies Delivery", "Prescription Collection"] %>
     <%= f.button :submit, 'Submit your request', class: "btn btn-primary" %>
+    <div class="form-group">
+      <p class="disclaimer">
+        Data agreement
+        <br><br>
+        By pressing submit, you are consenting to share your deatils with volunteers who will contact you and ask you questions about your needs, and arrange support. Please do not provide any sensitive details that you would not wish to divulge. 
+        <br><br>
+        Our volunteers are asked to read and consent to our General Data Protection Notice. Nonetheless, whilst we do our best to support volunteers, volunteers are self-selecting and not processed by Stay Well Deliveries.
+        <br><br>
+        For further info, please e-mail us at contact@hoxton-digital.com
+      </p>
+    </div>
   <% end %>
 </div>
