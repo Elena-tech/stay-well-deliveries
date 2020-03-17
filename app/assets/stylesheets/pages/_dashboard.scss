@@ -1,0 +1,15 @@
+.nav-link.active {
+  background-color: $primary-color-light!important;
+}
+
+.nav-link {
+  color: black;
+    &:hover {
+    color: #585858;
+  }
+}
+
+.dashboard {
+  height: 100vh;
+  padding: 20px;
+}
