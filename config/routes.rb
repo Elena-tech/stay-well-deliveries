@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     get '/collaborator', to: 'pages#collaborator'
     get '/contact', to: 'pages#contact'
     get '/dashboard', to: 'pages#dashboard'
+    get '/collaborator_form', to: 'collaborators#new'
+    get '/recipient_form', to: 'recipients#new'
 end
